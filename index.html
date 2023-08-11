@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=REM:wght@200;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Multi-step Form - FrontendPro Challenge</title>
+</head>
+
+<body>
+
+  <div class="form">
+
+    <section class="form__header">
+      <h1 class="form__heading">
+        Join our Community of Developers
+      </h1>
+      <p class="form__description">
+        To join our community and participate in frontend challenges. Please fill out the following form.
+      </p>
+    </section>
+    <span class="border-bottom"></span>
+
+
+    <section class="form__content">
+
+      <div class="step-number-box">
+
+        <button class="step-number step-number--1 step-number--active wait">
+          <span>1</span>
+        </button>
+        <span class="step-number-line dont-wait"></span>
+        <button class="step-number step-number--2 wait">
+          <span>2</span>
+
+        </button>
+        <span class="step-number-line dont-wait"></span>
+
+        <button class="step-number step-number--3 wait">
+          <span>3</span>
+
+        </button>
+        <span class="step-number-line dont-wait"></span>
+
+        <button class="step-number step-number--4 wait">
+          <span>4</span>
+
+        </button>
+
+      </div>
+
+      <span class="border-bottom"></span>
+
+      <div class="steps-slide">
+
+        <div class="step-slide step-slide--1">
+          <div class="u-padding-md">
+            <h3 class="step-slide__heading">Personal Information</h3>
+            <p class="step-slide__description">Please provide your personal details so we can get to know you better.</p>
+
+            <form name="form" action="#" class="step-slide__form" autocomplete="off">
+
+              <div class="step-slide__input-box">
+                <label for="name" class="step-slide__label">Full Name</label>
+                <input name="userName" type="text" maxlength="20" class="step-slide__input" id="name" placeholder="your name" value="">
+                <span class="msg-err msg-err--name"></span>
+              </div>
+
+              <div class="step-slide__input-box">
+                <label for="name" class="step-slide__label">Email Address</label>
+                <input name="email" type="text" maxlength="30" class="step-slide__input" id="email" placeholder="name@email.com" value="">
+                <span class="msg-err msg-err--email"></span>
+              </div>
+
+              <div class="step-slide__input-box">
+                <label for="phoneNumber" class="step-slide__label">Phone Number</label>
+                <input type="text" maxlength="15" name="phoneNumber" class="step-slide__input" id="phoneNumber" placeholder="+213 0771683974" value="">
+                <span class="msg-err msg-err--phone"></span>
+              </div>
+
+              <div class="step-slide__input-box">
+                <label for="portfolio" class="step-slide__label">Portfolio/GitHub Link</label>
+                <input name="portfolio" type="text" class="step-slide__input" id="portfolio" placeholder="github.com/rishipurwarl" value="">
+                <span class="msg-err msg-err--portfolio"></span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="step-slide step-slide--2">
+
+          <div class="u-padding-md">
+            <h3 class="step-slide__heading">Skill Level</h3>
+            <p class="step-slide__description">Please tell us about your skill level in frontend development.</p>
+
+            <form action="#" class="step-slide__form" autocomplete="off">
+
+              <input class="step-slide__input-radio radio-step2" type="radio" id="beginner" name="radOption" value="Beginner">
+              <label for="beginner" class="step-slide__label-radio step-slide__label-radio--step2">
+                <div class="step-slide__icon-box">
+                  <svg class="step-slide__icon">
+                    <use xlink:href="./img/symbol-defs.svg#icon-leaf" />
+                  </svg>
+                </div>
+
+                Beginner
+
+              </label>
+
+              <input class="step-slide__input-radio radio-step2" type="radio" id="intermediate" name="radOption" value="Intermediate">
+              <label for="intermediate" class="step-slide__label-radio step-slide__label-radio--step2">
+                <div class="step-slide__icon-box">
+                  <svg class="step-slide__icon">
+                    <use xlink:href="./img/symbol-defs.svg#icon-compass" />
+                  </svg>
+                </div>
+
+                Intermediate
+
+              </label>
+
+              <input class="step-slide__input-radio radio-step2" type="radio" id="advanced" name="radOption" value="Advanced">
+              <label for="advanced" class="step-slide__label-radio step-slide__label-radio--step2">
+                <div class="step-slide__icon-box">
+                  <svg class="step-slide__icon">
+                    <use xlink:href="./img/symbol-defs.svg#icon-rocket" />
+                  </svg>
+                </div>
+
+                Advanced
+
+              </label>
+
+              <input class="step-slide__input-radio radio-step2" type="radio" id="expert" name="radOption" value="Expert">
+              <label for="expert" class="step-slide__label-radio step-slide__label-radio--step2">
+                <div class="step-slide__icon-box">
+                  <svg class="step-slide__icon">
+                    <use xlink:href="./img/symbol-defs.svg#icon-graduation-cap" />
+                  </svg>
+                </div>
+
+                Expert
+
+              </label>
+
+              <span class="err-message hidden">Choose your level!</span>
+
+            </form>
+          </div>
+
+        </div>
+
+        <div class="step-slide step-slide--3">
+
+          <div class="u-padding-md">
+            <h3 class="step-slide__heading">Challenge Preference</h3>
+            <p class="step-slide__description">Please tell us which frontend challenges you would like to participate in.</p>
+
+            <form action="#" class="step-slide__form" autocomplete="off">
+
+
+              <input value="HTML/CSS/JS" class="step-slide__input-radio radio-step3" type="radio" id="html-css-js" name="radOption">
+              <label for="html-css-js" class="step-slide__label-radio step-slide__label-radio--step3">
+                <span class="step-slide__input-check-box"></span>
+
+                HTML/CSS/JS
+
+              </label>
+
+
+              <input value="ReactJS" class="step-slide__input-radio radio-step3" type="radio" id="react" name="radOption">
+              <label for="react" class="step-slide__label-radio step-slide__label-radio--step3">
+                <span class="step-slide__input-check-box"></span>
+
+                ReactJS
+
+              </label>
+
+
+              <input value="Angular" class="step-slide__input-radio radio-step3" type="radio" id="angular" name="radOption">
+              <label for="angular" class="step-slide__label-radio step-slide__label-radio--step3">
+                <span class="step-slide__input-check-box"></span>
+
+                Angular
+
+              </label>
+
+              <input value="Vue.js" class="step-slide__input-radio radio-step3" type="radio" id="vue" name="radOption">
+              <label for="vue" class="step-slide__label-radio step-slide__label-radio--step3">
+                <span class="step-slide__input-check-box"></span>
+
+                Vue.js
+
+              </label>
+
+              <span class="err-message hidden">Choose your challenges!</span>
+
+
+            </form>
+          </div>
+
+        </div>
+
+        <div class="step-slide step-slide--4">
+          <div class="u-padding-md">
+            <h3 class="step-slide__heading">Review and Confrim</h3>
+            <p class="step-slide__description">Please review your Information to make sure everything is accurate.</p>
+
+            <div class="step-slide__options-box">
+              <div class="option">
+                <p class="option__name">Full Name</p>
+                <p class="option__user option__user--name">Sohaib Benyamna</p>
+              </div>
+
+              <div class="option">
+                <p class="option__name">Email Address</p>
+                <p class="option__user option__user--email"></p>
+              </div>
+
+              <div class="option">
+                <p class="option__name">Phone Number</p>
+                <p class="option__user option__user--phoneNumber"></p>
+              </div>
+
+              <div class="option">
+                <p class="option__name">Portfolio/GitHub Link</p>
+                <p class="option__user option__user--portfolio"></p>
+              </div>
+
+              <div class="option">
+                <p class="option__name">Skill Level</p>
+                <p class="option__user option__user--level"></p>
+              </div>
+
+              <div class="option">
+                <p class="option__name">Challenge Preference</p>
+                <p class="option__user option__user--challenge"></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="thank-you-page thank-you-page--hidden">
+
+          <svg class="thank-you-page__icon">
+            <use xlink:href="./img/symbol-defs.svg#icon-check-alt" />
+          </svg>
+
+          <h3 class="thank-you-page__heading">
+            Congratulation <span class="than-you-page__user-name"></span> !🎉
+
+          </h3>
+
+          <p class="thank-you-page__text">Your profile has been created and you are now ready to start participating in challenges that match your interrests and coding experience level.</p>
+        </div>
+
+      </div>
+
+      <span class="border-bottom"></span>
+
+      <div class="control-step">
+        <button class="btn btn-back-step btn-invisible">Go Back</button>
+        <button class="btn btn-next-step">Next Step</button>
+        <button class="btn btn-start hidden">Start Now</button>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+  <script src="/src/script.js"></script>
+</body>
+
+</html>

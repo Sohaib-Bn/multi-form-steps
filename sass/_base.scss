@@ -1,0 +1,114 @@
+// COLOR
+
+$color-primary: #fc6c4c;
+$color-bg: #f3f3e3;
+
+$color-grey-dark-1: #e5e7eb;
+$color-grey-dark-2: #9b9ea3;
+$color-text: #242b38;
+
+// BREAK POINT
+$bp-sm: 31.25em;
+
+/////////////////////////
+///
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-9rem);
+  }
+
+  80% {
+    opacity: 1;
+
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(9rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveBottomLong {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@font-face {
+  font-family: "Amergo";
+  src: url(../fonts/Amergo.ttf);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: inherit;
+
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  color: $color-text;
+  background-color: $color-bg;
+  font-family: "REM", sans-serif;
+  line-height: 1.6;
+  overflow: hidden;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+.form {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  @media only screen and (max-width: $bp-sm) {
+    height: 100%;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// /* Firefox */
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
