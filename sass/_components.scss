@@ -131,6 +131,13 @@
   background-color: rgba($color-grey-dark-1, 0.7);
 }
 
+.border-bottom {
+  display: none;
+  @media only screen and (max-width: $bp-sm) {
+    display: block;
+  }
+}
+
 .u-padding-md {
   padding: 0 2.5rem;
 }
@@ -450,20 +457,20 @@
 }
 
 .input--err {
-  border: 1.3px solid rgb(255, 0, 0);
+  border: 1.3px solid $color-red-err;
 }
 
 .input--err::-webkit-input-placeholder {
-  color: rgba(255, 2, 2, 0.619);
+  color: rgba($color-red-err, 0.62);
 }
 
 .input--succeed {
-  border: 1.3px solid rgb(11, 176, 6);
+  border: 1.3px solid $color-green-secceed;
 }
 
 .err-message {
   position: absolute;
-  color: rgb(255, 2, 2);
+  color: $color-red-err;
   font-size: 1rem;
   bottom: 0.1rem;
   left: 0.1rem;
@@ -480,7 +487,7 @@
 
 .msg-err {
   position: absolute;
-  color: rgb(255, 2, 2);
+  color: $color-red-err;
   font-size: 0.9rem;
   bottom: -1.7rem;
   left: 0.5rem;
